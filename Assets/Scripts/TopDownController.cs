@@ -6,7 +6,7 @@ using UnityEngine;
 public class TopDownController : MonoBehaviour
 {
     public event Action<Vector2> OnMoveEvent;
-    public event Action<Vector3> OnLookEvent;
+    public event Action<Vector2> OnLookEvent;
 
     public void CallMoveEvent(Vector2 direction)
     {
