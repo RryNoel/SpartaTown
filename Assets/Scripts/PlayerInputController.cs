@@ -6,12 +6,19 @@ public class PlayerInputController : TopDownController
 {
     private Camera camera;
 
+    [Header("캐릭터 이름 관련")]
     public InputField playerNameInput;
-    private string playerName = null;
-
     public GameObject NameInputPanel;
     public Text InGameNameText;
 
+    [Header("캐릭터 선택 관련")]
+    public GameObject CharacterChoicePanel;
+    public GameObject MainSprite;
+    public GameObject MainSprite2;
+    public GameObject CharacterChoiceBtn;
+    public GameObject CharacterChoiceBtn2;
+
+    private string playerName = null;
     private void Awake()
     {
         camera = Camera.main;
@@ -50,5 +57,28 @@ public class PlayerInputController : TopDownController
             InGameNameText.text = playerName;
             NameInputPanel.gameObject.SetActive(false);
         }
+    }
+
+    public void OnCharacterChoicePanel()
+    {
+        CharacterChoicePanel.SetActive(true);
+    }
+
+    public void ChoiceCharacter1()
+    {
+        MainSprite.gameObject.SetActive(true);
+        MainSprite2.gameObject.SetActive(false);
+        CharacterChoiceBtn.gameObject.SetActive(true);
+        CharacterChoiceBtn2.gameObject.SetActive(false);
+        CharacterChoicePanel.gameObject.SetActive(false);
+    }
+
+    public void ChoiceCharacter2()
+    {
+        MainSprite.gameObject.SetActive(false);
+        MainSprite2.gameObject.SetActive(true);
+        CharacterChoiceBtn.gameObject.SetActive(false);
+        CharacterChoiceBtn2.gameObject.SetActive(true);
+        CharacterChoicePanel.gameObject.SetActive(false);
     }
 }
