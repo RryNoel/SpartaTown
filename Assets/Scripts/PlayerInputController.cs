@@ -15,8 +15,12 @@ public class PlayerInputController : TopDownController
     public GameObject CharacterChoicePanel;
     public GameObject MainSprite;
     public GameObject MainSprite2;
+    public GameObject CharacterChoiceBg;
     public GameObject CharacterChoiceBtn;
     public GameObject CharacterChoiceBtn2;
+
+    public RectTransform NamePanel;
+    public RectTransform InputImage;
 
     private string playerName = null;
     private void Awake()
@@ -57,6 +61,15 @@ public class PlayerInputController : TopDownController
             InGameNameText.text = playerName;
             NameInputPanel.gameObject.SetActive(false);
         }
+    }
+
+    public void OnInputNamePanel()
+    {
+        NameInputPanel.gameObject.SetActive(true);
+        NamePanel.sizeDelta = new Vector2(800, 500);
+        InputImage.anchoredPosition = new Vector2(0, -20);
+        playerNameInput.text = null;
+        CharacterChoiceBg.gameObject.SetActive(false);
     }
 
     public void OnCharacterChoicePanel()
