@@ -65,6 +65,7 @@ public class PlayerInputController : TopDownController
 
     public void OnInputNamePanel()
     {
+        InputImage.gameObject.SetActive(true);
         NameInputPanel.gameObject.SetActive(true);
         NamePanel.sizeDelta = new Vector2(800, 500);
         InputImage.anchoredPosition = new Vector2(0, -20);
@@ -75,6 +76,14 @@ public class PlayerInputController : TopDownController
     public void OnCharacterChoicePanel()
     {
         CharacterChoicePanel.SetActive(true);
+    }
+
+    public void OnCharacterChoicePanel2()
+    {
+        NameInputPanel.gameObject.SetActive(true);
+        NamePanel.sizeDelta = new Vector2(0, 0);
+        CharacterChoicePanel.SetActive(true);
+        InputImage.gameObject.SetActive(false);
     }
 
     public void ChoiceCharacter1()
