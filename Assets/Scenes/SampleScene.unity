@@ -6329,6 +6329,7 @@ MonoBehaviour:
   CharacterChoiceBtn: {fileID: 1196567044}
   CharacterChoiceBtn2: {fileID: 786851718}
   NamePanel: {fileID: 1314466132}
+  InputImage: {fileID: 0}
 --- !u!114 &395398750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14458,9 +14459,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
+  - {fileID: 1932636409}
+  - {fileID: 2041049229}
   - {fileID: 395398746}
   - {fileID: 1597137528}
   - {fileID: 257169319}
-  - {fileID: 1932636409}
-  - {fileID: 2041049229}
   - {fileID: 1190077522}
